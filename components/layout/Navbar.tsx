@@ -9,11 +9,11 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  const LOGO_BORDER_RADIUS = "rounded-full";
 
-  const LOGO_BORDER_RADIUS = "rounded-full"; 
-  const LOGO_SIZE_DEFAULT = "h-10 md:h-15 lg:h-17"; 
-  const LOGO_SIZE_SCROLLED = "h-10 md:h-12 lg:h-14"; 
-  
+  // ✅ FIXED SIZES (valid Tailwind only)
+  const LOGO_SIZE_DEFAULT = "h-12 md:h-16 lg:h-20";
+  const LOGO_SIZE_SCROLLED = "h-10 md:h-12 lg:h-14";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,11 +44,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex justify-between items-center">
 
         {/* ── Logo ── */}
-        <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
+        <Link href="/" className="flex items-center gap-[2px] group flex-shrink-0">
           <div className={`overflow-hidden flex-shrink-0 ${LOGO_BORDER_RADIUS} transition-all duration-500`}>
             <Image
-              src="https://res.cloudinary.com/duweg8kpv/image/upload/v1774468057/r1-real_m99rxp.png"
-              alt="Raysolo Hotel & Suites"
+              src="https://res.cloudinary.com/duweg8kpv/image/upload/mondillolo-removebg-preview_jxb72h.png"
+              alt="Mondilo Royal Hotel & Suites"
               width={200}
               height={80}
               className={`w-auto object-contain transition-all duration-500 ${
@@ -58,8 +58,7 @@ export default function Navbar() {
             />
           </div>
 
-          <div className="flex flex-col leading-tight gap-[3px]">
-          
+          <div className="flex flex-col leading-tight gap-[1px] -ml-5">
             <span
               className={`font-serif font-semibold uppercase tracking-[0.4em] transition-all duration-500 text-white/90 group-hover:text-[#d4af37] ${
                 scrolled
@@ -67,7 +66,7 @@ export default function Navbar() {
                   : "text-[10px] md:text-[11px] lg:text-[12px]"
               }`}
             >
-             Mondilo Royal
+              Mondilo Royal
             </span>
 
             <span
@@ -119,35 +118,37 @@ export default function Navbar() {
 
       {/* ── Mobile Menu Dropdown ── */}
       <div
-        className={`md:hidden absolute top-full left-0 w-full bg-black/98 backdrop-black-md flex flex-col items-center py-10 space-y-6 transition-all duration-300 border-t border-[#d4af37]/20 ${
+        className={`md:hidden absolute top-full left-0 w-full bg-black/98 backdrop-blur-md flex flex-col items-center py-10 space-y-6 transition-all duration-300 border-t border-[#d4af37]/20 ${
           isOpen
             ? "opacity-100 translate-y-0 pointer-events-auto"
             : "opacity-0 -translate-y-4 pointer-events-none"
         }`}
       >
-        {/* Mobile Logo + Brand */}
-        <div className="flex flex-col items-center gap-2">
+        {/* Mobile Logo */}
+        <div className="flex flex-col items-center">
           <div className={`overflow-hidden ${LOGO_BORDER_RADIUS}`}>
             <Image
-              src="https://res.cloudinary.com/duweg8kpv/image/upload/v1774963107/mD_blmp1s.png"
+              src="https://res.cloudinary.com/duweg8kpv/image/upload/mondillolo-removebg-preview_jxb72h.png"
               alt="Mondilo Royal Hotel"
-              width={100}
-              height={40}
-              className="h-14 w-auto object-contain"
+              width={200}
+              height={80}
+              className="h-14 md:h-16 w-auto object-contain"
             />
           </div>
-          <span className="font-serif font-semibold uppercase tracking-[0.4em] text-white/90 text-[10px]">
-          Mondilo Royal
+
+          <span className="font-semibold uppercase tracking-[0.4em] text-white/90 text-[10px]">
+            Mondilo Royal Hotel
           </span>
-          <span className="font-sans font-light tracking-[0.35em] uppercase text-[#d4af37] text-[9px]">
+
+          <span className="font-light tracking-[0.35em] uppercase text-[#d4af37] text-[9px]">
             Hotel &amp; Suites
           </span>
         </div>
 
-        {/* Gold Divider */}
+        {/* Divider */}
         <div className="w-20 h-px bg-gradient-to-r from-transparent via-[#d4af37] to-transparent" />
 
-        {/* Mobile Nav Links */}
+        {/* Links */}
         {navLinks.map((link) => (
           <Link
             key={link.href}
@@ -159,7 +160,7 @@ export default function Navbar() {
           </Link>
         ))}
 
-        {/* Mobile Book Now */}
+        {/* CTA */}
         <Link
           href="/book"
           onClick={() => setIsOpen(false)}

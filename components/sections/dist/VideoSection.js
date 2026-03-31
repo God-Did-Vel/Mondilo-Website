@@ -29,7 +29,7 @@ function VideoSection() {
     };
     return (React.createElement("section", { className: "relative h-[80vh] w-full flex items-center justify-center overflow-hidden bg-black" },
         !videoError && (React.createElement("video", { ref: videoRef, onError: handleVideoError, onPlay: function () { return setIsPlaying(true); }, onPause: function () { return setIsPlaying(false); }, loop: true, playsInline: true, preload: "metadata", muted: true, className: "absolute inset-0 w-full h-full object-cover", crossOrigin: "anonymous" },
-            React.createElement("source", { src: "https://res.cloudinary.com/duweg8kpv/image/upload/v1774928333/m3_imubqx.jpg", type: "video/mp4" }),
+            React.createElement("source", { src: "https://res.cloudinary.com/duweg8kpv/video/upload/White_and_Brown_Food_Facebook_Video_Promo_cmq9hk.mp4", type: "video/mp4" }),
             "Your browser does not support the video tag.")),
         React.createElement("div", { className: "absolute inset-0 bg-black/60" }),
         React.createElement("div", { className: "relative z-10 text-center px-6" },

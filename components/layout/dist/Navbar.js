@@ -9,7 +9,8 @@ function Navbar() {
     var _a = react_1.useState(false), isOpen = _a[0], setIsOpen = _a[1];
     var _b = react_1.useState(false), scrolled = _b[0], setScrolled = _b[1];
     var LOGO_BORDER_RADIUS = "rounded-full";
-    var LOGO_SIZE_DEFAULT = "h-10 md:h-15 lg:h-17";
+    // ✅ FIXED SIZES (valid Tailwind only)
+    var LOGO_SIZE_DEFAULT = "h-12 md:h-16 lg:h-20";
     var LOGO_SIZE_SCROLLED = "h-10 md:h-12 lg:h-14";
     react_1.useEffect(function () {
         var handleScroll = function () {
@@ -29,10 +30,10 @@ function Navbar() {
             : "bg-gradient-to-b from-black/70 via-black/30 to-transparent py-4") },
         React.createElement("div", { className: "absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#d4af37] to-transparent opacity-60" }),
         React.createElement("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex justify-between items-center" },
-            React.createElement(link_1["default"], { href: "/", className: "flex items-center gap-3 group flex-shrink-0" },
+            React.createElement(link_1["default"], { href: "/", className: "flex items-center gap-[2px] group flex-shrink-0" },
                 React.createElement("div", { className: "overflow-hidden flex-shrink-0 " + LOGO_BORDER_RADIUS + " transition-all duration-500" },
-                    React.createElement(image_1["default"], { src: "https://res.cloudinary.com/duweg8kpv/image/upload/v1774468057/r1-real_m99rxp.png", alt: "Raysolo Hotel & Suites", width: 200, height: 80, className: "w-auto object-contain transition-all duration-500 " + (scrolled ? LOGO_SIZE_SCROLLED : LOGO_SIZE_DEFAULT), priority: true })),
-                React.createElement("div", { className: "flex flex-col leading-tight gap-[3px]" },
+                    React.createElement(image_1["default"], { src: "https://res.cloudinary.com/duweg8kpv/image/upload/mondillolo-removebg-preview_jxb72h.png", alt: "Mondilo Royal Hotel & Suites", width: 200, height: 80, className: "w-auto object-contain transition-all duration-500 " + (scrolled ? LOGO_SIZE_SCROLLED : LOGO_SIZE_DEFAULT), priority: true })),
+                React.createElement("div", { className: "flex flex-col leading-tight gap-[1px] -ml-5" },
                     React.createElement("span", { className: "font-serif font-semibold uppercase tracking-[0.4em] transition-all duration-500 text-white/90 group-hover:text-[#d4af37] " + (scrolled
                             ? "text-[9px] md:text-[10px]"
                             : "text-[10px] md:text-[11px] lg:text-[12px]") }, "Mondilo Royal"),
@@ -49,11 +50,11 @@ function Navbar() {
         React.createElement("div", { className: "md:hidden absolute top-full left-0 w-full bg-black/98 backdrop-blur-md flex flex-col items-center py-10 space-y-6 transition-all duration-300 border-t border-[#d4af37]/20 " + (isOpen
                 ? "opacity-100 translate-y-0 pointer-events-auto"
                 : "opacity-0 -translate-y-4 pointer-events-none") },
-            React.createElement("div", { className: "flex flex-col items-center gap-2" },
+            React.createElement("div", { className: "flex flex-col items-center" },
                 React.createElement("div", { className: "overflow-hidden " + LOGO_BORDER_RADIUS },
-                    React.createElement(image_1["default"], { src: "https://res.cloudinary.com/duweg8kpv/image/upload/v1774963107/mD_blmp1s.png", alt: "Mondilo Royal Hotel", width: 100, height: 40, className: "h-14 w-auto object-contain" })),
-                React.createElement("span", { className: "font-serif font-semibold uppercase tracking-[0.4em] text-white/90 text-[10px]" }, "Mondilo Royal"),
-                React.createElement("span", { className: "font-sans font-light tracking-[0.35em] uppercase text-[#d4af37] text-[9px]" }, "Hotel & Suites")),
+                    React.createElement(image_1["default"], { src: "https://res.cloudinary.com/duweg8kpv/image/upload/mondillolo-removebg-preview_jxb72h.png", alt: "Mondilo Royal Hotel", width: 200, height: 80, className: "h-14 md:h-16 w-auto object-contain" })),
+                React.createElement("span", { className: "font-semibold uppercase tracking-[0.4em] text-white/90 text-[10px]" }, "Mondilo Royal Hotel"),
+                React.createElement("span", { className: "font-light tracking-[0.35em] uppercase text-[#d4af37] text-[9px]" }, "Hotel & Suites")),
             React.createElement("div", { className: "w-20 h-px bg-gradient-to-r from-transparent via-[#d4af37] to-transparent" }),
             navLinks.map(function (link) { return (React.createElement(link_1["default"], { key: link.href, href: link.href, onClick: function () { return setIsOpen(false); }, className: "text-sm font-bold uppercase tracking-[0.3em] text-white/80 hover:text-[#d4af37] transition-colors duration-300" }, link.label)); }),
             React.createElement(link_1["default"], { href: "/book", onClick: function () { return setIsOpen(false); }, className: "mt-2 border border-[#d4af37] text-[#d4af37] font-bold px-10 py-3 uppercase tracking-[0.2em] text-xs hover:bg-[#d4af37] hover:text-black transition-all duration-300" }, "Book Now"))));

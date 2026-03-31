@@ -46,7 +46,7 @@ export default function VideoSection() {
           crossOrigin="anonymous"
         >
           <source
-            src="https://res.cloudinary.com/duweg8kpv/image/upload/v1774928333/m3_imubqx.jpg"
+            src="https://res.cloudinary.com/duweg8kpv/video/upload/White_and_Brown_Food_Facebook_Video_Promo_cmq9hk.mp4"
             type="video/mp4"
           />
           Your browser does not support the video tag.
