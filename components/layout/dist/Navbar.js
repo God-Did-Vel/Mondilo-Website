@@ -51,7 +51,7 @@ function Navbar() {
                 : "opacity-0 -translate-y-4 pointer-events-none") },
             React.createElement("div", { className: "flex flex-col items-center gap-2" },
                 React.createElement("div", { className: "overflow-hidden " + LOGO_BORDER_RADIUS },
-                    React.createElement(image_1["default"], { src: "https://res.cloudinary.com/duweg8kpv/image/upload/v1774963107/mD_blmp1s.png", alt: "Raysolo Hotel & Suites", width: 100, height: 40, className: "h-14 w-auto object-contain" })),
+                    React.createElement(image_1["default"], { src: "https://res.cloudinary.com/duweg8kpv/image/upload/v1774963107/mD_blmp1s.png", alt: "Mondilo Royal Hotel", width: 100, height: 40, className: "h-14 w-auto object-contain" })),
                 React.createElement("span", { className: "font-serif font-semibold uppercase tracking-[0.4em] text-white/90 text-[10px]" }, "Mondilo Royal"),
                 React.createElement("span", { className: "font-sans font-light tracking-[0.35em] uppercase text-[#d4af37] text-[9px]" }, "Hotel & Suites")),
             React.createElement("div", { className: "w-20 h-px bg-gradient-to-r from-transparent via-[#d4af37] to-transparent" }),

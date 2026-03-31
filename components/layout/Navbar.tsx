@@ -130,7 +130,7 @@ export default function Navbar() {
           <div className={`overflow-hidden ${LOGO_BORDER_RADIUS}`}>
             <Image
               src="https://res.cloudinary.com/duweg8kpv/image/upload/v1774963107/mD_blmp1s.png"
-              alt="Raysolo Hotel & Suites"
+              alt="Mondilo Royal Hotel"
               width={100}
               height={40}
               className="h-14 w-auto object-contain"
