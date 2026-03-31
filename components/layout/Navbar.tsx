@@ -119,7 +119,7 @@ export default function Navbar() {
 
       {/* ── Mobile Menu Dropdown ── */}
       <div
-        className={`md:hidden absolute top-full left-0 w-full bg-black/98 backdrop-blur-md flex flex-col items-center py-10 space-y-6 transition-all duration-300 border-t border-[#d4af37]/20 ${
+        className={`md:hidden absolute top-full left-0 w-full bg-black/98 backdrop-black-md flex flex-col items-center py-10 space-y-6 transition-all duration-300 border-t border-[#d4af37]/20 ${
           isOpen
             ? "opacity-100 translate-y-0 pointer-events-auto"
             : "opacity-0 -translate-y-4 pointer-events-none"
