@@ -129,7 +129,7 @@ export default function Navbar() {
         <div className="flex flex-col items-center gap-2">
           <div className={`overflow-hidden ${LOGO_BORDER_RADIUS}`}>
             <Image
-              src="https://res.cloudinary.com/duweg8kpv/image/upload/v1774468057/r1-real_m99rxp.png"
+              src="https://res.cloudinary.com/duweg8kpv/image/upload/v1774963107/mD_blmp1s.png"
               alt="Raysolo Hotel & Suites"
               width={100}
               height={40}

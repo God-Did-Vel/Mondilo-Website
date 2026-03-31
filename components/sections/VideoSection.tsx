@@ -46,7 +46,7 @@ export default function VideoSection() {
           crossOrigin="anonymous"
         >
           <source
-            src="https://res.cloudinary.com/duweg8kpv/video/upload/v1774556140/raysolo_uho93j.mp4"
+            src="https://res.cloudinary.com/duweg8kpv/image/upload/v1774928333/m3_imubqx.jpg"
             type="video/mp4"
           />
           Your browser does not support the video tag.
